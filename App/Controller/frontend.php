@@ -10,7 +10,15 @@ $app->get('/', function() use ($app){
 // Add Controller
 $app->match('/add', function(Request $request) use($app) {
 
+    if ($request->isMethod('POST')) {
+        $data = filter_input_array(INPUT_POST, array());
+    }
 
+//    $app['db']->insert('post', array(
+//                                    'name' => 'test',
+//                                    'description' => 'lalala',
+//                                    'file_path' => null,
+//                               ));
 
 //    $form = $app['form.factory']->createBuilder('form')
 //        ->add('name')
