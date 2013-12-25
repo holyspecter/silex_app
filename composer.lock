@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "91b68680fa1fb7a48fe45bb20daa62f0",
+    "hash": "5726995c0b01e78bc2e28b11e5cbab6e",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -283,6 +283,68 @@
             "time": "2013-12-03 14:52:22"
         },
         {
+            "name": "symfony/form",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/Form",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Form.git",
+                "reference": "1204234eb0da54526ad02203c365350aea3ae83a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Form/zipball/1204234eb0da54526ad02203c365350aea3ae83a",
+                "reference": "1204234eb0da54526ad02203c365350aea3ae83a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/intl": "~2.3",
+                "symfony/options-resolver": "~2.1",
+                "symfony/property-access": "~2.2"
+            },
+            "require-dev": {
+                "symfony/http-foundation": "~2.2",
+                "symfony/security-csrf": "~2.4",
+                "symfony/validator": "~2.2"
+            },
+            "suggest": {
+                "symfony/framework-bundle": "For templating with PHP.",
+                "symfony/security-csrf": "For protecting forms against CSRF attacks.",
+                "symfony/twig-bridge": "For templating with Twig.",
+                "symfony/validator": "For form validation."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Form\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Form Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-28 10:27:26"
+        },
+        {
             "name": "symfony/http-foundation",
             "version": "v2.4.0",
             "target-dir": "Symfony/Component/HttpFoundation",
@@ -404,6 +466,241 @@
             "time": "2013-12-03 15:23:03"
         },
         {
+            "name": "symfony/icu",
+            "version": "v1.2.0",
+            "target-dir": "Symfony/Component/Icu",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Icu.git",
+                "reference": "7299cd3d8d6602103d1ebff5d0a9917b7bc6de72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/7299cd3d8d6602103d1ebff5d0a9917b7bc6de72",
+                "reference": "7299cd3d8d6602103d1ebff5d0a9917b7bc6de72",
+                "shasum": ""
+            },
+            "require": {
+                "lib-icu": ">=4.4",
+                "php": ">=5.3.3",
+                "symfony/intl": "~2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Icu\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Contains an excerpt of the ICU data and classes to load it.",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "icu",
+                "intl"
+            ],
+            "time": "2013-06-03 18:32:58"
+        },
+        {
+            "name": "symfony/intl",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/Intl",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Intl.git",
+                "reference": "34cce16e362ffff2fbe7b41a1ae3830c85be73bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Intl/zipball/34cce16e362ffff2fbe7b41a1ae3830c85be73bf",
+                "reference": "34cce16e362ffff2fbe7b41a1ae3830c85be73bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/icu": "~1.0-RC"
+            },
+            "require-dev": {
+                "symfony/filesystem": ">=2.1"
+            },
+            "suggest": {
+                "ext-intl": "to use the component with locales other than \"en\""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Intl\\": ""
+                },
+                "classmap": [
+                    "Symfony/Component/Intl/Resources/stubs"
+                ],
+                "files": [
+                    "Symfony/Component/Intl/Resources/stubs/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                },
+                {
+                    "name": "Eriksen Costa",
+                    "email": "eriksen.costa@infranology.com.br"
+                }
+            ],
+            "description": "A PHP replacement layer for the C intl extension that includes additional data from the ICU library.",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "i18n",
+                "icu",
+                "internationalization",
+                "intl",
+                "l10n",
+                "localization"
+            ],
+            "time": "2013-11-23 21:17:02"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/OptionsResolver",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/OptionsResolver.git",
+                "reference": "2b7145803c970e62ac521b2b0984b4bb67209561"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/2b7145803c970e62ac521b2b0984b4bb67209561",
+                "reference": "2b7145803c970e62ac521b2b0984b4bb67209561",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2013-09-19 09:47:34"
+        },
+        {
+            "name": "symfony/property-access",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/PropertyAccess",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/PropertyAccess.git",
+                "reference": "274951234150e303c83099a2429be6be35629fe9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/PropertyAccess/zipball/274951234150e303c83099a2429be6be35629fe9",
+                "reference": "274951234150e303c83099a2429be6be35629fe9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\PropertyAccess\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony PropertyAccess Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "access",
+                "array",
+                "extraction",
+                "index",
+                "injection",
+                "object",
+                "property",
+                "property path",
+                "reflection"
+            ],
+            "time": "2013-11-13 21:30:16"
+        },
+        {
             "name": "symfony/routing",
             "version": "v2.4.0",
             "target-dir": "Symfony/Component/Routing",
@@ -468,6 +765,326 @@
                 "url"
             ],
             "time": "2013-11-22 17:42:00"
+        },
+        {
+            "name": "symfony/security-core",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/Security/Core",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/security-core.git",
+                "reference": "89abc0c8c8b91721962c6ec6a60b79c7fc983a22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/security-core/zipball/89abc0c8c8b91721962c6ec6a60b79c7fc983a22",
+                "reference": "89abc0c8c8b91721962c6ec6a60b79c7fc983a22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "ircmaxell/password-compat": "1.0.*",
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/http-foundation": "~2.4",
+                "symfony/validator": "~2.2"
+            },
+            "suggest": {
+                "ircmaxell/password-compat": "For using the BCrypt password encoder in PHP <5.5",
+                "symfony/event-dispatcher": "",
+                "symfony/expression-language": "For using the expression voter",
+                "symfony/http-foundation": "",
+                "symfony/validator": "For using the user password constraint"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Security\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Security Component - Core Library",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-26 16:40:27"
+        },
+        {
+            "name": "symfony/security-csrf",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/Security/Csrf",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/security-csrf.git",
+                "reference": "67c366a65a5bbcbcb2db7d4d4e45a16b85f24797"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/security-csrf/zipball/67c366a65a5bbcbcb2db7d4d4e45a16b85f24797",
+                "reference": "67c366a65a5bbcbcb2db7d4d4e45a16b85f24797",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/security-core": "~2.4"
+            },
+            "require-dev": {
+                "symfony/http-foundation": "~2.1"
+            },
+            "suggest": {
+                "symfony/http-foundation": "For using the class SessionTokenStorage."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Security\\Csrf\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Security Component - CSRF Library",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-21 06:37:18"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "v2.1.13",
+            "target-dir": "Symfony/Component/Translation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Translation.git",
+                "reference": "39ba7a5dc560959667c45c9353b70f43182ca4b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/39ba7a5dc560959667c45c9353b70f43182ca4b3",
+                "reference": "39ba7a5dc560959667c45c9353b70f43182ca4b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/config": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "suggest": {
+                "symfony/config": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Translation": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-04-20 08:25:59"
+        },
+        {
+            "name": "symfony/twig-bridge",
+            "version": "v2.1.13",
+            "target-dir": "Symfony/Bridge/Twig",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/TwigBridge.git",
+                "reference": "e3a48a99971c35ad8d1c5bf36b6b3d22b15df306"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/TwigBridge/zipball/e3a48a99971c35ad8d1c5bf36b6b3d22b15df306",
+                "reference": "e3a48a99971c35ad8d1c5bf36b6b3d22b15df306",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "twig/twig": ">=1.9.1,<2.0-dev"
+            },
+            "require-dev": {
+                "symfony/form": "2.1.*",
+                "symfony/routing": "2.1.*",
+                "symfony/security": "2.1.*",
+                "symfony/templating": "2.1.*",
+                "symfony/translation": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "suggest": {
+                "symfony/form": "2.1.*",
+                "symfony/routing": "2.1.*",
+                "symfony/security": "2.1.*",
+                "symfony/templating": "2.1.*",
+                "symfony/translation": "2.1.*",
+                "symfony/yaml": "2.1.*"
+            },
+            "type": "symfony-bridge",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Bridge\\Twig": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Twig Bridge",
+            "homepage": "http://symfony.com",
+            "time": "2013-04-22 04:28:40"
+        },
+        {
+            "name": "twig/extensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig-extensions.git",
+                "reference": "0fdc8ca874d415b65c7a0d31376cac9c9ed775af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/0fdc8ca874d415b65c7a0d31376cac9c9ed775af",
+                "reference": "0fdc8ca874d415b65c7a0d31376cac9c9ed775af",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_Extensions_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Common additional features for Twig that do not directly belong in core",
+            "homepage": "https://github.com/fabpot/Twig-extensions",
+            "keywords": [
+                "debug",
+                "i18n",
+                "text"
+            ],
+            "time": "2013-11-27 18:19:39"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "85e4ff98000157ff753d934b9f13659a953f5666"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/85e4ff98000157ff753d934b9f13659a953f5666",
+                "reference": "85e4ff98000157ff753d934b9f13659a953f5666",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.15-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2013-12-06 07:47:10"
         }
     ],
     "packages-dev": [
@@ -477,9 +1094,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "twig/extensions": 20
+    },
     "platform": [
 
     ],

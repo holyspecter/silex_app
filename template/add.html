@@ -5,9 +5,6 @@
     </head>
     <body>
         <h1>Add new post</h1>
-        <form method="post" action="#">
-            {{ form_widget(form) }}
-            <input type="submit" value="Send" />
-        </form>
+        {{ include('_form.html') }}
     </body>
 </html>
