@@ -38,5 +38,14 @@ $app['twig.path'] = array(__DIR__ . '/../template');
 $app['twig']->addExtension(new Twig_Extensions_Extension_I18n());
 //$app['twig.options'] = array('cache' => __DIR__.'/../var/cache/twig');
 
+// Controllers
 require_once ROOT . '/App/Controller/frontend.php';
-require_once ROOT . '/App/Model/Post.php';
+require_once ROOT . '/App/Controller/godlike.php';
+
+// Models
+spl_autoload_register('modelLoader');
+
+function modelLoader($className)
+{
+    include ROOT . "/App/Model/$className.php";
+}

@@ -12,6 +12,10 @@ class Post
 
     protected $validationErrors = array();
 
+    /**
+     * Validates input
+     * @return bool
+     */
     public function validate()
     {
         if (false === ($this->name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING))) {
@@ -29,14 +33,26 @@ class Post
         return (bool)$this->filePath;
     }
 
+    /**
+     * Checks the uploaded file, move it to upload directory.
+     * @return bool|string Path to file on success or false on failure.
+     */
     protected function checkUploadedFile()
     {
-        if (isset($_FILES['file']['error'])) {
+        $whitelist = array('jpg', 'gif', 'jpeg', 'JPG', 'GIF', 'JPEG');
+
+        if ($_FILES['file']['error']) {
             $this->validationErrors['file'] = 'Error occured when uploading file.';
 
             return false;
         } else {
-            $filepath = ROOT.'/upload/'.md5(time());
+            $fileExtension = array_pop(explode('.', $_FILES['file']['name']));
+
+            if (false === in_array($fileExtension, $whitelist)) {
+                $this->validationErrors['file'] = "You can not upload file of type $fileExtension.";
+            }
+
+            $filepath = ROOT. '/upload/' . md5(time()) . '.' . $fileExtension;
             move_uploaded_file($_FILES['file']['tmp_name'], $filepath);
 
             return $filepath;

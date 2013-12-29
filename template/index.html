@@ -5,6 +5,13 @@
     </head>
     <body>
         Posts should be here.<br/>
+        {% for post in posts %}
+            <h1>{{ post.name }}</h1>
+            <p>{{ post.description }}</p>
+            <div>
+                <img src="{{ post.file_path }}" />
+            </div>
+        {% endfor %}
         {# dump(posts) #}
     </body>
 </html>
