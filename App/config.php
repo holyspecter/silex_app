@@ -47,5 +47,7 @@ spl_autoload_register('modelLoader');
 
 function modelLoader($className)
 {
-    include ROOT . "/App/Model/$className.php";
+    if (file_exists(ROOT . "/App/Model/$className.php")) {
+        include ROOT . "/App/Model/$className.php";
+    }
 }
