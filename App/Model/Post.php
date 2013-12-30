@@ -49,10 +49,12 @@ class Post
             $fileExtension = array_pop(explode('.', $_FILES['file']['name']));
 
             if (false === in_array($fileExtension, $whitelist)) {
-                $this->validationErrors['file'] = "You can not upload file of type $fileExtension.";
+                $this->validationErrors['file'] = "You can not upload file of type '$fileExtension'.";
+
+                return false;
             }
 
-            $filepath = ROOT. '/upload/' . md5(time()) . '.' . $fileExtension;
+            $filepath = ROOT. '/web/upload/' . md5(time()) . '.' . $fileExtension;
             move_uploaded_file($_FILES['file']['tmp_name'], $filepath);
 
             return $filepath;

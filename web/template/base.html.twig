@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block header %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+    Posts should be here.<br/>
+    {% for post in posts %}
+        <h1>{{ post.name }}</h1>
+        <p>{{ post.description }}</p>
+        <div>
+            <img class="post-image" src="{{ post.file_path }}" />
+        </div>
+    {% endfor %}
+    {# dump(posts) #}
+{% endblock %}
