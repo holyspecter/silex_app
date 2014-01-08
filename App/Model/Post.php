@@ -35,7 +35,7 @@ class Post
 
     /**
      * Checks the uploaded file, move it to upload directory.
-     * @return bool|string Filename on success or false on failure.
+     * @return bool|string Path to file on success or false on failure.
      */
     protected function checkUploadedFile()
     {
@@ -49,14 +49,15 @@ class Post
             $fileExtension = array_pop(explode('.', $_FILES['file']['name']));
 
             if (false === in_array($fileExtension, $whitelist)) {
-                $this->validationErrors['file'] = "You can not upload file of type $fileExtension.";
+                $this->validationErrors['file'] = "You can not upload file of type '$fileExtension'.";
+
+                return false;
             }
 
-            $filename = md5(time()) . '.' . $fileExtension;
-            $filepath = ROOT. '/upload/' . $filename;
+            $filepath = ROOT. '/web/upload/' . md5(time()) . '.' . $fileExtension;
             move_uploaded_file($_FILES['file']['tmp_name'], $filepath);
 
-            return $filename;
+            return $filepath;
         }
     }
 

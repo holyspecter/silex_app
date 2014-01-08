@@ -1,9 +1,20 @@
 <form method="post" action="#" enctype="multipart/form-data">
+
     <label for="name">Name</label><br/>
     <input type="text" name="name" id="name" required /><br/>
+    {% if validationErrors.text is defined %}
+        <div class="form-error">{{  validationErrors.text }}<div>
+    {% endif %}
+
     <label for="description">Description</label><br/>
     <input type="text" name="description" id="description" /><br/>
+    {% if validationErrors.description is defined %}
+        <div class="form-error">{{  validationErrors.description }}<div>
+    {% endif %}
     <label for="file">Image File</label><br/>
     <input type="file" name="file" id="file" required /><br/>
+    {% if validationErrors.file is defined %}
+        <div class="error">{{  validationErrors.file }}<div>
+    {% endif %}
     <input type="submit" value="Save" />
 </form>

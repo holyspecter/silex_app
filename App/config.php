@@ -34,7 +34,7 @@ $app->register(new \Silex\Provider\TwigServiceProvider());
 $app['twig']      = $app->share($app->extend('twig', function ($twig, $app) {
     return $twig;
 }));
-$app['twig.path'] = array(__DIR__ . '/../template');
+$app['twig.path'] = array(ROOT . '/web/template');
 $app['twig']->addExtension(new Twig_Extensions_Extension_I18n());
 //$app['twig.options'] = array('cache' => __DIR__.'/../var/cache/twig');
 

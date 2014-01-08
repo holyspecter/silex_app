@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 $app->get('/', function() use ($app){
     $posts = $app['db']->fetchAll('SELECT * FROM post');
 
-    return $app['twig']->render('index.html', array(
+    return $app['twig']->render('index.html.twig', array(
                                                  'posts' => $posts,
                                               ));
 });
@@ -22,7 +22,7 @@ $app->match('/add', function(Request $request) use($app) {
         }
     }
 
-    return $app['twig']->render('add.html', array(
+    return $app['twig']->render('add.html.twig', array(
                                                  'validationErrors' => $post->getValidationErrors(),
                                             ));
 });
