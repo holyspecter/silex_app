@@ -31,12 +31,17 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 
 // Twig
 $app->register(new \Silex\Provider\TwigServiceProvider());
+$app->register(new \Silex\Provider\UrlGeneratorServiceProvider());
 $app['twig']      = $app->share($app->extend('twig', function ($twig, $app) {
     return $twig;
 }));
 $app['twig.path'] = array(ROOT . '/web/template');
 $app['twig']->addExtension(new Twig_Extensions_Extension_I18n());
 //$app['twig.options'] = array('cache' => __DIR__.'/../var/cache/twig');
+
+// Paginator
+define('POSTS_PER_PAGE', 5);
+$app->register(new Paginator\Provider\PaginatorServiceProvider());
 
 // Controllers
 require_once ROOT . '/App/Controller/frontend.php';

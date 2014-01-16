@@ -11,5 +11,8 @@
             <img class="post-image" src="{{ post.file_path }}" />
         </div>
     {% endfor %}
+    <div class="pager">
+        {{ paginator(paginator) }}
+    </div>
     {# dump(posts) #}
 {% endblock %}
