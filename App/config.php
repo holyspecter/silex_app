@@ -43,6 +43,22 @@ $app['twig']->addExtension(new Twig_Extensions_Extension_I18n());
 define('POSTS_PER_PAGE', 5);
 $app->register(new Paginator\Provider\PaginatorServiceProvider());
 
+// Security
+$app->register(new Silex\Provider\SecurityServiceProvider(), array(
+                                                                  'security.firewalls' => array(
+                                                                      'admin' => array(
+                                                                          'pattern' => '^/admin',
+                                                                          'http' => true,
+                                                                          'users' => array(
+                                                                              'admin' => array('ROLE_ADMIN', '123')
+                                                                          ),
+                                                                      )
+                                                                  ),
+//                                                                  'security.encoders' => array(
+//                                                                      'Symfony\Component\Security\Core\User\User' => 'plaintext',
+//                                                                  )
+));
+
 // Controllers
 require_once ROOT . '/App/Controller/frontend.php';
 require_once ROOT . '/App/Controller/godlike.php';

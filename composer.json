@@ -8,6 +8,7 @@
         "symfony/twig-bridge": "2.1.*",
         "symfony/translation": "2.1.*",
         "doctrine/dbal": "2.2.*",
-        "euskadi31/paginator-service-provider": "dev-master"
+        "euskadi31/paginator-service-provider": "dev-master",
+        "symfony/security": "~2.3"
     }
 }
