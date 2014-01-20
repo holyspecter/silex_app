@@ -21,7 +21,20 @@ $app->get('/{page}', function($page) use ($app){
                                               ));
 })
 ->assert('page', '\d+')
-->value('page', 1);
+->value('page', 1)
+->bind('home');
+
+// View Controller
+$app->get('/post/{id}', function($id) use ($app) {
+
+    $post = $app['db']->fetchAssoc("SELECT * FROM post WHERE id=:id", array('id' => $id));
+
+    return $app['twig']->render('view.html.twig', array(
+                                                       'post' => $post,
+                                                  ));
+})
+->assert('id', '\d+')
+->bind('post_view');
 
 // Add Controller
 $app->match('/add', function(Request $request) use($app) {
@@ -37,4 +50,5 @@ $app->match('/add', function(Request $request) use($app) {
     return $app['twig']->render('add.html.twig', array(
                                                  'validationErrors' => $post->getValidationErrors(),
                                             ));
-});
+})
+->bind('post_add');
