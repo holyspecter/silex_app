@@ -1,5 +1,7 @@
 <?php
 
+namespace SilexApp\Model;
+
 class Post
 {
     protected $id;

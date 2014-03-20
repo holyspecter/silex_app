@@ -1,6 +1,7 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
+use SilexApp\Model\Post;
 
 // Index Controller
 $app->get('/{page}', function($page) use ($app){

@@ -1,5 +1,5 @@
 <?php
 
-require_once __DIR__.'/../App/config.php';
+require_once __DIR__.'/../src/config.php';
 
 $app->run();
